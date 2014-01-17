@@ -1,0 +1,399 @@
+Script started on Fri Jan 17 05:39:00 2014
+[1;31madmin[0m[1m@[m[1;35mnoder.alpha-it.ru[0m[1m:[m[1;33m/usr/local/www/sugarcrm/custom/modules/Asterisk[0;0m#[0m php asteriskLogger.php	
+
+Warning: fopen(): Filename cannot be empty in /usr/local/www/sugarcrm/custom/modules/Asterisk/asteriskLogger.php on line 1499
+
+Warning: fclose() expects parameter 1 to be resource, boolean given in /usr/local/www/sugarcrm/custom/modules/Asterisk/asteriskLogger.php on line 1506
+
+
+
+******** Asterisk Logger Starting [2014-01-17 01:39:05]**************
+[Config Settings]
+ Sugar root set to [/usr/local/www/sugarcrm/custom/modules/Asterisk/../../../]
+ Main Log is logging to: 
+ Found Language file for ru_ru
+ Callout prefix is []
+ Callin prefix is []
+ Match Internal Regex = /^(sip\/[1-9][0-9][0-9]?[0-9]?-|Local)/i
+[Database Connection]
+ Selecting DB Name: sugarcrm
+[SOAP Connection]
+ Trying SOAP login endpoint=[http://manager.alpha-it.ru/sugar/soap.php] user=[asterisk] password=[6f0cf07563af6145d210d2235248fe61]
+
+Warning: Attempt to modify property of non-object in /usr/local/www/sugarcrm/include/nusoap/nusoap.php on line 6166
+
+Warning: Attempt to modify property of non-object in /usr/local/www/sugarcrm/include/nusoap/nusoap.php on line 6166
+
+Warning: Attempt to modify property of non-object in /usr/local/www/sugarcrm/include/nusoap/nusoap.php on line 6166
+
+Warning: Attempt to modify property of non-object in /usr/local/www/sugarcrm/include/nusoap/nusoap.php on line 6166
+ Successfully logged into Sugar via SOAP! SessionId=mr6h4p1kqs1drrg38abqip5bj1 user=asterisk GUID=2fe5324e-68af-e2a0-577f-52d7e7fc1de3
+[Asterisk Manager Interface (AMI) Connection]
+ Successfully opened socket connection to 127.0.0.1:5038
+ AMI Version Info:
+ ```
+ Asterisk Call Manager/1.3
+ ```
+ AMI Login action raw response:
+ ```
+ Response: Success
+ Message: Authentication accepted
+ ```
+ AMI Login was a *success!*
+Waiting for call events...
+[2014-01-17 01:39:17]
+! --- Event -----------------------------------------------------------
+!                Event --> Newchannel                                        
+!            Privilege --> call,all                                          
+!              Channel --> SIP/1102-0000006a                                 
+!         ChannelState --> 0                                                 
+!     ChannelStateDesc --> Down                                              
+!          CallerIDNum --> 1102                                              
+!         CallerIDName --> 1102                                              
+!          AccountCode -->                                                   
+!                Exten --> 84952289878                                       
+!              Context --> office1                                           
+!             Uniqueid --> 1389922757.106                                    
+! ---------------------------------------------------------------------
+! AMI Event 'Newstate suppressed.
+[2014-01-17 01:39:17]
+! --- Event -----------------------------------------------------------
+!                Event --> Newchannel                                        
+!            Privilege --> call,all                                          
+!              Channel --> SIP/mangosip2-0000006b                            
+!         ChannelState --> 0                                                 
+!     ChannelStateDesc --> Down                                              
+!          CallerIDNum -->                                                   
+!         CallerIDName -->                                                   
+!          AccountCode -->                                                   
+!                Exten -->                                                   
+!              Context --> default                                           
+!             Uniqueid --> 1389922757.107                                    
+! ---------------------------------------------------------------------
+[2014-01-17 01:39:17]
+! --- Event -----------------------------------------------------------
+!                Event --> NewCallerid                                       
+!            Privilege --> call,all                                          
+!              Channel --> SIP/mangosip2-0000006b                            
+!          CallerIDNum --> 84952289878                                       
+!         CallerIDName -->                                                   
+!             Uniqueid --> 1389922757.107                                    
+!      CID-CallingPres --> 0 (Presentation Allowed, Not Screened)            
+! ---------------------------------------------------------------------
+ CallerID Changed to: 84952289878
+UPDATE asterisk_log SET CallerID='84952289878', callstate='Dial' WHERE asterisk_id='1389922757.107'
+[2014-01-17 01:39:17]
+! --- Event -----------------------------------------------------------
+!                Event --> Dial                                              
+!            Privilege --> call,all                                          
+!             SubEvent --> Begin                                             
+!              Channel --> SIP/1102-0000006a                                 
+!          Destination --> SIP/mangosip2-0000006b                            
+!          CallerIDNum --> 1102                                              
+!         CallerIDName --> 1102                                              
+!     ConnectedLineNum --> <unknown>                                         
+!    ConnectedLineName --> <unknown>                                         
+!             UniqueID --> 1389922757.106                                    
+!         DestUniqueID --> 1389922757.107                                    
+!           Dialstring --> 74952289878@mangosip2                             
+! ---------------------------------------------------------------------
+! Dial Event src=SIP/1102-0000006a dest=SIP/mangosip2-0000006b
+! Successfully created CALL record with id=638d9bea-8502-6905-089e-52d88900bca1
+ Stripping callout prefix: 
+ Stripping callin prefix: 
+ CallerID is: 1102
+Looking for user extension number in: SIP/1102-0000006a
+Channel Matched SIP/### style regex. Ext is:1102
+1389922757.106updated inside false
+OUTBOUND state detected... /^(sip\/[1-9][0-9][0-9]?[0-9]?-|Local)/i is astMatchInternal eChannel= SIP/1102-0000006a eDestination=SIP/mangosip2-0000006b
+! AMI Event 'Newstate suppressed.
+! AMI Event 'Newstate suppressed.
+! AMI Event 'Newstate suppressed.
+[2014-01-17 01:39:20]
+! --- Event -----------------------------------------------------------
+!                Event --> NewAccountCode                                    
+!            Privilege --> call,all                                          
+!              Channel --> SIP/mangosip2-0000006b                            
+!             Uniqueid --> 1389922757.107                                    
+!          AccountCode -->                                                   
+!       OldAccountCode -->                                                   
+! ---------------------------------------------------------------------
+[2014-01-17 01:39:20]
+! --- Event -----------------------------------------------------------
+!                Event --> Bridge                                            
+!            Privilege --> call,all                                          
+!          Bridgestate --> Link                                              
+!           Bridgetype --> core                                              
+!             Channel1 --> SIP/1102-0000006a                                 
+!             Channel2 --> SIP/mangosip2-0000006b                            
+!            Uniqueid1 --> 1389922757.106                                    
+!            Uniqueid2 --> 1389922757.107                                    
+!            CallerID1 --> 1102                                              
+!            CallerID2 --> 84952289878                                       
+! ---------------------------------------------------------------------
+DEBUG: Entered Bridge
+Bridge isn't internal to internal
+Internal Queue Event Detected
+Internal Queue: SELECT id FROM asterisk_log WHERE remote_channel like 'SIP/1102-0000006a' and direction='I' and (channel = '' OR channel is NULL) 
+DEBUG: NO Queue BRIDGE ROWS found
+[2014-01-17 01:39:40]
+! --- Event -----------------------------------------------------------
+!                Event --> HangupRequest                                     
+!            Privilege --> call,all                                          
+!              Channel --> SIP/1102-0000006a                                 
+!             Uniqueid --> 1389922757.106                                    
+! ---------------------------------------------------------------------
+[2014-01-17 01:39:40]
+! --- Event -----------------------------------------------------------
+!                Event --> Bridge                                            
+!            Privilege --> call,all                                          
+!          Bridgestate --> Unlink                                            
+!           Bridgetype --> core                                              
+!             Channel1 --> SIP/1102-0000006a                                 
+!             Channel2 --> SIP/mangosip2-0000006b                            
+!            Uniqueid1 --> 1389922757.106                                    
+!            Uniqueid2 --> 1389922757.107                                    
+!            CallerID1 --> 1102                                              
+!            CallerID2 --> 84952289878                                       
+! ---------------------------------------------------------------------
+DEBUG: Entered Bridge
+Bridge isn't internal to internal
+Internal Queue Event Detected
+Internal Queue: SELECT id FROM asterisk_log WHERE remote_channel like 'SIP/1102-0000006a' and direction='I' and (channel = '' OR channel is NULL) 
+DEBUG: NO Queue BRIDGE ROWS found
+[2014-01-17 01:39:40]
+! --- Event -----------------------------------------------------------
+!                Event --> Hangup                                            
+!            Privilege --> call,all                                          
+!              Channel --> SIP/mangosip2-0000006b                            
+!             Uniqueid --> 1389922757.107                                    
+!          CallerIDNum --> 84952289878                                       
+!         CallerIDName --> <unknown>                                         
+!     ConnectedLineNum --> 1102                                              
+!    ConnectedLineName --> 1102                                              
+!          AccountCode -->                                                   
+!                Cause --> 16                                                
+!            Cause-txt --> Normal Clearing                                   
+! ---------------------------------------------------------------------
+ In DialEnd... 1389922757.107
+  ## Deleting callid =  because it didn't match any user extension
+[2014-01-17 01:39:40]
+! --- Event -----------------------------------------------------------
+!                Event --> Dial                                              
+!            Privilege --> call,all                                          
+!             SubEvent --> End                                               
+!              Channel --> SIP/1102-0000006a                                 
+!             UniqueID --> 1389922757.106                                    
+!           DialStatus --> ANSWER                                            
+! ---------------------------------------------------------------------
+ In DialEnd... 1389922757.106
+### +++ findUserByAsteriskExtension(1102)
+# +++ findCallByAsteriskId(1389922757.106)
+! Found entry in asterisk_log recordId=638d9bea-8502-6905-089e-52d88900bca1
+Array
+(
+    [bitter] => Array
+        (
+            [id] => 143
+            [is_master] => 0
+            [call_record_id] => 638d9bea-8502-6905-089e-52d88900bca1
+            [asterisk_id] => 1389922757.106
+            [callstate] => Connected
+            [uistate] => 
+            [callerID] => 1102
+            [channel] => SIP/1102-0000006a
+            [remote_channel] => SIP/mangosip2-0000006b
+            [timestamp_call] => 2014-01-17 01:39:17
+            [timestamp_link] => 2014-01-17 01:39:20
+            [timestamp_hangup] => 
+            [direction] => O
+            [asterisk_dest_id] => 
+            [opencnam] => 
+            [answered] => 0
+            [user_extension] => 1102
+            [user_device] => 
+            [inbound_extension] => 
+            [bean_module] => 
+            [bean_id] => 
+            [bean_name] => 
+            [bean_link] => 
+            [bean_description] => 
+            [parent_module] => 
+            [parent_id] => 
+            [parent_name] => 
+            [parent_link] => 
+            [push_sent] => 0
+        )
+
+    [sweet] => Array
+        (
+            [assigned_user_name] => asterisk
+            [modified_by_name] => asterisk
+            [created_by_name] => asterisk
+            [id] => 638d9bea-8502-6905-089e-52d88900bca1
+            [name] => ** Авто-запись **
+            [date_entered] => 2014-01-17 01:39:17
+            [date_modified] => 2014-01-17 01:39:17
+            [modified_user_id] => 2fe5324e-68af-e2a0-577f-52d7e7fc1de3
+            [created_by] => 2fe5324e-68af-e2a0-577f-52d7e7fc1de3
+            [description] => 
+            [deleted] => 0
+            [assigned_user_id] => 2fe5324e-68af-e2a0-577f-52d7e7fc1de3
+            [duration_hours] => 0
+            [duration_minutes] => 
+            [date_start] => 
+            [date_end] => 
+            [parent_type] => 
+            [status] => В процессе
+            [direction] => Outbound
+            [parent_id] => 
+            [reminder_time] => -1
+            [email_reminder_time] => -1
+            [email_reminder_sent] => 0
+            [outlook_id] => 
+            [contact_name] => 
+            [repeat_type] => 
+            [repeat_interval] => 1
+            [repeat_dow] => 
+            [repeat_until] => 
+            [repeat_count] => 
+            [repeat_parent_id] => 
+            [recurring_source] => 
+            [asterisk_caller_id_c] => 
+            [asterisk_call_id_c] => 
+            [asterisk_inbound_ext_c] => 
+            [asterisk_user_ext_c] => 
+        )
+
+)
+### [1389922757.106] FOUND outbound CALL
+Looking for user extension number in: SIP/1102-0000006a
+Channel Matched SIP/### style regex. Ext is:1102
+### +++ findUserByAsteriskExtension(1102)
+! Assigned user id set to 1
+ [1389922757.106] Measured call duration is 20 seconds
+! Call is not related to any record (no matches)
+! Invalid Arguments passed to setRelationshipBetweenCallAndBean callRecordId=638d9bea-8502-6905-089e-52d88900bca1, beanId=, beanType=
+ Call start was 2014-01-17 01:39:17
+ [1389922757.106] (OUTBOUND) Now updating record in /Calls/ id=638d9bea-8502-6905-089e-52d88900bca1...
+NAME: ** Авто-запись **
+DESCRIPTION: 
+[2014-01-17 01:39:41]
+! --- Event -----------------------------------------------------------
+!                Event --> SoftHangupRequest                                 
+!            Privilege --> call,all                                          
+!              Channel --> SIP/1102-0000006a                                 
+!             Uniqueid --> 1389922757.106                                    
+!                Cause --> 16                                                
+! ---------------------------------------------------------------------
+[2014-01-17 01:39:41]
+! --- Event -----------------------------------------------------------
+!                Event --> Hangup                                            
+!            Privilege --> call,all                                          
+!              Channel --> SIP/1102-0000006a                                 
+!             Uniqueid --> 1389922757.106                                    
+!          CallerIDNum --> 1102                                              
+!         CallerIDName --> 1102                                              
+!     ConnectedLineNum --> <unknown>                                         
+!    ConnectedLineName --> <unknown>                                         
+!          AccountCode -->                                                   
+!                Cause --> 16                                                
+!            Cause-txt --> Normal Clearing                                   
+! ---------------------------------------------------------------------
+ In DialEnd... 1389922757.106
+### +++ findUserByAsteriskExtension(1102)
+# +++ findCallByAsteriskId(1389922757.106)
+! Found entry in asterisk_log recordId=638d9bea-8502-6905-089e-52d88900bca1
+Array
+(
+    [bitter] => Array
+        (
+            [id] => 143
+            [is_master] => 0
+            [call_record_id] => 638d9bea-8502-6905-089e-52d88900bca1
+            [asterisk_id] => 1389922757.106
+            [callstate] => Hangup
+            [uistate] => 
+            [callerID] => 1102
+            [channel] => SIP/1102-0000006a
+            [remote_channel] => SIP/mangosip2-0000006b
+            [timestamp_call] => 2014-01-17 01:39:17
+            [timestamp_link] => 2014-01-17 01:39:20
+            [timestamp_hangup] => 2014-01-17 01:39:40
+            [direction] => O
+            [asterisk_dest_id] => 
+            [opencnam] => 
+            [answered] => 0
+            [user_extension] => 1102
+            [user_device] => 
+            [inbound_extension] => 
+            [bean_module] => 
+            [bean_id] => 
+            [bean_name] => 
+            [bean_link] => 
+            [bean_description] => 
+            [parent_module] => 
+            [parent_id] => 
+            [parent_name] => 
+            [parent_link] => 
+            [push_sent] => 0
+        )
+
+    [sweet] => Array
+        (
+            [assigned_user_name] => Василий Татаренко
+            [modified_by_name] => asterisk
+            [created_by_name] => asterisk
+            [id] => 638d9bea-8502-6905-089e-52d88900bca1
+            [name] => Исходящий звонок
+            [date_entered] => 2014-01-17 01:39:17
+            [date_modified] => 2014-01-17 01:39:41
+            [modified_user_id] => 2fe5324e-68af-e2a0-577f-52d7e7fc1de3
+            [created_by] => 2fe5324e-68af-e2a0-577f-52d7e7fc1de3
+            [description] => 
+            [deleted] => 0
+            [assigned_user_id] => 1
+            [duration_hours] => 0
+            [duration_minutes] => 0
+            [date_start] => 2014-01-17 01:39:17
+            [date_end] => 2014-01-17 01:39:17
+            [parent_type] => 
+            [status] => Held
+            [direction] => Outbound
+            [parent_id] => 
+            [reminder_time] => -1
+            [email_reminder_time] => -1
+            [email_reminder_sent] => 0
+            [outlook_id] => 
+            [contact_name] => 
+            [repeat_type] => 
+            [repeat_interval] => 1
+            [repeat_dow] => 
+            [repeat_until] => 
+            [repeat_count] => 
+            [repeat_parent_id] => 
+            [recurring_source] => 
+            [asterisk_caller_id_c] => 1102
+            [asterisk_call_id_c] => 1389922757.106
+            [asterisk_inbound_ext_c] => 
+            [asterisk_user_ext_c] => 1102
+        )
+
+)
+### [1389922757.106] FOUND outbound CALL
+Looking for user extension number in: SIP/1102-0000006a
+Channel Matched SIP/### style regex. Ext is:1102
+### +++ findUserByAsteriskExtension(1102)
+! Assigned user id set to 1
+ [1389922757.106] Measured call duration is 22 seconds
+! Call is not related to any record (no matches)
+! Invalid Arguments passed to setRelationshipBetweenCallAndBean callRecordId=638d9bea-8502-6905-089e-52d88900bca1, beanId=, beanType=
+ Call start was 2014-01-17 01:39:17
+ [1389922757.106] (OUTBOUND) Now updating record in /Calls/ id=638d9bea-8502-6905-089e-52d88900bca1...
+NAME: Исходящий звонок
+DESCRIPTION: 
+^C
+[1;31madmin[0m[1m@[m[1;35mnoder.alpha-it.ru[0m[1m:[m[1;33m/usr/local/www/sugarcrm/custom/modules/Asterisk[0;0m#[0m exit
+exit
+
+Script done on Fri Jan 17 05:39:51 2014
