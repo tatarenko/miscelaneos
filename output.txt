@@ -1,5 +1,6 @@
 Script started on Fri Jan 17 05:39:00 2014
-[1;31madmin[0m[1m@[m[1;35mnoder.alpha-it.ru[0m[1m:[m[1;33m/usr/local/www/sugarcrm/custom/modules/Asterisk[0;0m#[0m php asteriskLogger.php	
+[1;31madmin[0m[1m@[m[1;35mnoder.alpha-it.ru[0m[1m:[m[1;33m/usr/local/www/sugarcrm/custom/modules/Asterisk[0;0m#[0m php asteriskLogger.php	
+
 
 Warning: fopen(): Filename cannot be empty in /usr/local/www/sugarcrm/custom/modules/Asterisk/asteriskLogger.php on line 1499
 
@@ -18,7 +19,7 @@ Warning: fclose() expects parameter 1 to be resource, boolean given in /usr/loca
 [Database Connection]
  Selecting DB Name: sugarcrm
 [SOAP Connection]
- Trying SOAP login endpoint=[http://manager.alpha-it.ru/sugar/soap.php] user=[asterisk] password=[6f0cf07563af6145d210d2235248fe61]
+ Trying SOAP login endpoint=[http://manager.alpha-it.ru/sugar/soap.php] user=[asterisk] ******************************
 
 Warning: Attempt to modify property of non-object in /usr/local/www/sugarcrm/include/nusoap/nusoap.php on line 6166
 
@@ -36,7 +37,8 @@ Warning: Attempt to modify property of non-object in /usr/local/www/sugarcrm/inc
  ```
  AMI Login action raw response:
  ```
- Response: Success
+ Response: Success
+
  Message: Authentication accepted
  ```
  AMI Login was a *success!*
@@ -392,8 +394,10 @@ Channel Matched SIP/### style regex. Ext is:1102
  [1389922757.106] (OUTBOUND) Now updating record in /Calls/ id=638d9bea-8502-6905-089e-52d88900bca1...
 NAME: Исходящий звонок
 DESCRIPTION: 
-^C
-[1;31madmin[0m[1m@[m[1;35mnoder.alpha-it.ru[0m[1m:[m[1;33m/usr/local/www/sugarcrm/custom/modules/Asterisk[0;0m#[0m exit
+^C
+
+[1;31madmin[0m[1m@[m[1;35mnoder.alpha-it.ru[0m[1m:[m[1;33m/usr/local/www/sugarcrm/custom/modules/Asterisk[0;0m#[0m exit
+
 exit
 
 Script done on Fri Jan 17 05:39:51 2014
